@@ -9,7 +9,7 @@
   <p>Price: $<%= '%.2f' % @product.price %></p>
 
 
-  <%= button_to 'Place Order', orders_path %>
+  <%= button_to 'Place Order', orders_path, params: {product_id: @product.id} %>
 
 <!--
   <form action="/add_to_cart" method="post">

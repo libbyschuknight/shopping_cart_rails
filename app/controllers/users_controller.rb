@@ -1,14 +1,16 @@
 class UsersController < ApplicationController
 
   def new
+    @user = User.new
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to sign_in_path(user_params)
-    else
+      session[:user_id] = @user.id
       redirect_to products_path
+    else
+      render 'users/new'
     end
   end
 

@@ -4,8 +4,7 @@
 
 <div id = "sign_up_form">
 
-  <!-- not sure if need to add method post below?? -->
-  <%= form_for :user, url: users_path do |f| %>
+  <%= form_for @user do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name, {placeholder: "name"} %>
 
@@ -22,7 +21,11 @@
 
   <% end %>
 
-  <p><%= @errors %></p>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %> </li>
+    <% end %>
+  </ul>
 
   </form>
 </div>

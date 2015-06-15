@@ -1,10 +1,9 @@
 class OrdersController < ApplicationController
 
   def create
-    # @order = Order.create(order_params)
-    @order = Order.create(user_id: 5, product_id: 10)
-
-    redirect_to order_path(id: @order.id)
+    @order = current_user.orders.create(product_id: params[:product_id])
+    # redirect_to order_path(id: @order.id)
+    redirect_to @order
   end
 
   def show
@@ -12,12 +11,11 @@ class OrdersController < ApplicationController
   end
 
 
-  ## ?? not sure if need this?
   private
 
-  def order_params
-    params.require(:order).permit(:user_id, :product_id) #maybe missing order date? might need to take out?
-  end
+  # def order_params
+  #   params.require(:order).permit(:product_id)
+  # end
 
 
 end
