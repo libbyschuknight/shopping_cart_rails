@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to sign_in_path(user_params)
     else
-      redirect_to prodcuts_path
+      redirect_to products_path
     end
   end
 

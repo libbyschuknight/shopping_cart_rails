@@ -5,32 +5,24 @@
 <div id = "sign_up_form">
 
 
+  <%= form_for :user, url: users_path do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, {placeholder: "name"} %>
 
+    <%= f.label :email %>
+    <%= f.text_field :email, {placeholder: "email"} %>
 
+    <%= f.label :password %>
+    <%= f.password_field :password, {placeholder: "password"} %>
 
+    <%= f.label :address, 'Street Address' %>
+    <%= f.text_field :address, {placeholder: "street address"} %>
 
+    <%= f.submit 'Sign Up' %>
 
-  <form action="/sign_up" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" name="name" placeholder="name">
+  <% end %>
 
-    <label for="email">Email:</label>
-    <input type="text" name="email" placeholder="email">
-
-    <label for="password">Password:</label>
-    <input type="password" name="password" placeholder="password">
-
-    <label for="address">Street Address:</label>
-    <input type="text" name="address" placeholder="street address">
-
-    <input type ="submit" value="sign up">
-
-
-    <%= form_for :user, url: new_user_path do |f| %>
-      <%= f.submit 'Sign Up' %>
-    <% end %>
-
-    <p><%= @errors %></p>
+  <p><%= @errors %></p>
 
   </form>
 </div>
