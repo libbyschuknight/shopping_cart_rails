@@ -1,0 +1,29 @@
+
+<div id = "cart-view">
+  <h2> Welcome to your shopping cart <%= @user.name %> </h2>
+  <br>
+  <h3>Your orders</h3>
+  <p>
+
+  <ul>
+    <% @user.orders.each do |order| %>
+    <li>
+      <%= order.id %> &nbsp;
+      <%= order.product.name %> &nbsp; &nbsp;
+
+
+      <form action="/delete_item" method="POST">
+        <input type = "hidden" value="<%= order.id %>" name = "id">
+        <input type ="submit" value="Remove item">
+      </form>
+    </li>
+
+
+    <% end %>
+  </ul>
+
+  <form class = "remove-all" action="/delete_all_items" method="POST">
+    <input type ="submit" value="Remove ALL items from your cart">
+  </form>
+
+</div>

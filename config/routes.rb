@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create', as: 'sign_in'
   delete '/sessions', to: 'sessions#destroy', as: 'sign_out'
   get '/sessions' =>'sessions#create' # ?? not sure how to get it creating user and then signing them in, on one go
-  resources :orders, only: [ :create, :show ]
+  resources :orders, only: [ :create, :show, :index ]
 
 
 

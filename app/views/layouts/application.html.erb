@@ -17,7 +17,7 @@
                 <button type="button"> <%= link_to 'Products', products_path %> </button>
               </li>
               <li>
-                <a href="/show_cart"><button type="button">Your Cart</button></a>
+                <%= button_to 'Your cart', orders_path, method: 'get' %>
               </li>
               <li>
                 <%= button_to 'Sign Out', sign_out_path, method: 'delete' %>

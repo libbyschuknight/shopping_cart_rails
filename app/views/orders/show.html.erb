@@ -10,8 +10,11 @@
   <h2><%= @order.product.name %></h2>
   <p><%= @order.product.description %></p>
 
-  <form action="/show_cart" method="post">
+
+  <%= button_to 'View Orders', orders_path, method: 'get' %>
+
+<!--   <form action="/show_cart" method="post">
       <input type ="submit" value="View cart">
-  </form>
+  </form> -->
 
 </div>
