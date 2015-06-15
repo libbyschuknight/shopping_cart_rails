@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
 
   def create
     # @order = Order.create(order_params)
-    @order = Order.create(user_id: params[:user_id], product_id: params[:product_id])
+    @order = Order.create(user_id: 5, product_id: 10)
 
     redirect_to order_path(id: @order.id)
   end
