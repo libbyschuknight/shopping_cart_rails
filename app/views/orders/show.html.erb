@@ -1,4 +1,17 @@
 
-
-
 <%= @order.user.name %>
+
+<div id = "new-order-view">
+  <h2>New order for: <%= @order.user.name %></h2>
+  <h4>Order Number: <%= @order.id %></h4>
+
+  <h3>You have added to your cart: </h3>
+  <p>
+  <h2><%= @order.product.name %></h2>
+  <p><%= @order.product.description %></p>
+
+  <form action="/show_cart" method="post">
+      <input type ="submit" value="View cart">
+  </form>
+
+</div>

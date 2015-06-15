@@ -21,6 +21,9 @@
 
   <% end %>
 
+  <% if !@user.errors.full_messages.empty? %>
+    <%= 'Incorrect inforamtion, please try again' %>
+  <% end %>
   <ul>
     <% @user.errors.full_messages.each do |message| %>
     <li><%= message %> </li>
