@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ShoppingCart</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>FakerShoppingCart</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <body>
+    <div id = "container">
+      <header>
+        <h1>faker.com</h1>
+        <nav>
+           <ul>
+              <li>
+                <a href="/index"><button type="button">Products</button></a>
+              </li>
+              <li>
+                <a href="/show_cart"><button type="button">Your Cart</button></a>
+              </li>
+              <li>
+                <form action="/sign_out" method="POST">
+                  <input type ="submit" value="Sign Out">
+                </form>
+              </li>
+           </ul>
+         </nav>
+      </header>
 
-</body>
+
+
+      <main role="main">
+        <%= yield %>
+      </main>
+
+      <footer>
+        <p>faker.com &copy; 2015</p>
+      </footer>
+    </div>
+
+  </body>
 </html>
+
+
+
+
+

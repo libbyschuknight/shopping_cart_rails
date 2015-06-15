@@ -13,3 +13,183 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
+
+
+ * {
+   margin: 0 auto;
+ }
+
+ body {
+   margin: 0 auto;
+   background-color: #65C6BB;
+   font-family: 'Raleway', 'Trebuchet MS', Helvetica, sans-serif;
+   color: #173A36;
+ }
+
+ #container {
+   margin: 20px;
+   text-align: center;
+   background-color: #65C6BB;
+ }
+
+ main {
+   background-color: #65C6BB;
+   margin: 10px;
+   /*padding: 20px;*/
+
+ }
+
+
+ form {
+   margin-top: 30px;
+   margin-bottom: 20px;
+   width: 600px;
+ }
+
+ /*####################### Links site wide ####################*/
+
+ a {
+   text-decoration: none;
+   color: #2A6E67;
+ }
+
+ a:hover {
+   text-decoration: none;
+   color: #ACE3DD;
+ }
+
+
+ /*#################### Navigation ##########################*/
+
+ nav {
+   text-align:center;
+   padding: 10px 0;
+   margin:20px 0 0;
+ }
+
+ nav ul {
+   list-style: none;
+   margin: 0 10px;
+   padding: 0;
+ }
+
+ nav li {
+   display: inline-block;
+ }
+
+ nav a {
+   font-weight: normal;
+   padding: 15px 10px;
+ }
+
+ nav form {
+   margin: 0px;
+   width: 100px;
+ }
+
+
+ /*############# Sign up page ########################*/
+
+ #sign_up_form form {
+   margin-top: 30px;
+   margin-bottom: 20px;
+   width: 200px;
+   /*margin-right: 0px;*/
+ }
+
+ #sign_up_form label {
+   padding: 10px;
+ }
+
+ /*#################### Products ########################*/
+
+ #products_list ul{
+   list-style: none;
+   padding: 0;
+   text-decoration: none;
+   margin:5px;
+ }
+
+
+ /*###############################*/
+
+
+ #product-item-view, #new-order-view {
+   width: 75%;
+ }
+
+ #product-item-view h2, h3 {
+   line-height: 2;
+ }
+
+ #product-item-view p {
+   margin-top: 20px;
+   font-weight: bold;
+ }
+
+ /*####################################*/
+
+ #new-order-view h2, h3 {
+   line-height: 2;
+ }
+
+ #new-order-view p {
+   margin-top: 20px;
+ }
+
+ /*#################### Cart View ########################*/
+
+ #cart-view {
+   width: 50%;
+ }
+
+ #cart-view li form {
+   margin: 0;
+   width: 100px;
+   display: inline-block;
+   /*float: right;*/
+ }
+
+ #cart-view ul{
+   /*margin-top: 40px;*/
+   list-style: none;
+   padding: 0;
+   text-decoration: none;
+   /*margin:5px;*/
+ }
+
+ #cart-view ul li {
+   padding: 5px;
+   border-top: 1px solid #173A36;
+ }
+
+ .remove-all {
+   width: 75%;
+ }
+
+
+ /*######## Footer ########*/
+
+ footer {
+   margin-top: 30px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
