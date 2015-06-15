@@ -10,12 +10,13 @@
     <li>
       <%= order.id %> &nbsp;
       <%= order.product.name %> &nbsp; &nbsp;
+      <%= button_to 'Remove Item', order, method: 'delete' %>
 
-
-      <form action="/delete_item" method="POST">
-        <input type = "hidden" value="<%= order.id %>" name = "id">
+<!-- params: {order_id: order.id} -->
+<!--       <form action="/delete_item" method="POST">
+        <input type = "hidden" value="<= order.id %>" name = "id">
         <input type ="submit" value="Remove item">
-      </form>
+      </form> -->
     </li>
 
 

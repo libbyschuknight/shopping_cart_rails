@@ -16,6 +16,13 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def destroy
+    user = User.find(current_user)
+    user.orders.delete(params[:id])
+
+    redirect_to orders_path
+  end
+
 
   private
 
