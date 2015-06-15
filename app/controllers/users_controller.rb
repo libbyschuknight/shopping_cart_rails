@@ -1,13 +1,20 @@
 class UsersController < ApplicationController
 
-  def index
-    @users = User.all
+  def new
   end
 
-  def show
-    # take user email and password
-    # find user
-    # show user? on index.html.erb ? on products page?
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to sign_in_path(user_params)
+    end
+
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :address )
   end
 
 

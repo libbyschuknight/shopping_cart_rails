@@ -3,7 +3,11 @@
 
 <h1>Products</h1>
 
-<div id = products_list>
+<% if @user %>
+  <h3>Welcome <%= @user.name %></h3>
+<% end %>
+
+<div id = 'products_list'>
   <ul>
     <% @products.each do |product| %>
     <li>
@@ -16,17 +20,25 @@
 </div>
 
 
-<div id = "sign_in_form">
-  <form action="/sign_in" method="POST">
-      Email: <input type="text" name="email" placeholder="email">
+<% unless @user %>
+  <div id = "sign_in_form">
 
-      Password: <input type="password" name="password" placeholder="password">
-      <input type ="submit" value="sign in">
-  </form>
+    <%= form_for :user, url: sign_in_path do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email, {placeholder: "email"} %>
 
-  <p><%= session[:error] %></p>
+      <%= f.label :password %>
+      <%= f.password_field :password, {placeholder: "password"} %>
 
-  <form action="/sign_up" method="get">
-      <input type="submit" value="sign up">
-  </form>
-</div>
+      <%= f.submit 'Sign In' %>
+    <% end %>
+
+    <p><%= flash[:error] %></p>
+
+    <form action="/sign_up" method="get">
+        <input type="submit" value="sign up">
+    </form>
+  </div>
+
+<% end %>
+
