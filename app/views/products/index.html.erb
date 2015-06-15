@@ -1,11 +1,8 @@
-
-<h4>Welcome to faker.com </h4>
+<% if @user %>
+  <h4>Welcome to faker.com <%= @user.name %></h4>
+<% end %>
 
 <h1>Products</h1>
-
-<% if @user %>
-  <h3>Welcome <%= @user.name %></h3>
-<% end %>
 
 <div id = 'products_list'>
   <ul>
@@ -35,9 +32,12 @@
 
     <p><%= flash[:error] %></p>
 
-    <form action="/sign_up" method="get">
-        <input type="submit" value="sign up">
-    </form>
+
+
+
+
+    <%= button_to 'Sign Up', new_user_path, method: 'get' %>
+
   </div>
 
 <% end %>

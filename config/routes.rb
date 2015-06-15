@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'products#index'
   resources :products, only: [ :index, :show]
-  resources :users, only: :create
+  resources :users, only: [ :create, :new ]
   post '/sessions', to: 'sessions#create', as: 'sign_in'
   delete '/sessions', to: 'sessions#destroy', as: 'sign_out'
 

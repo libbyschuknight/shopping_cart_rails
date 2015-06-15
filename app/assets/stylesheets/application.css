@@ -19,23 +19,25 @@
 
  * {
    margin: 0 auto;
+   /*background-color: #BE90D4;*/
  }
 
  body {
    margin: 0 auto;
-   background-color: #65C6BB;
+   background-color: #BE90D4;
    font-family: 'Raleway', 'Trebuchet MS', Helvetica, sans-serif;
-   color: #173A36;
+   color: #663399;
  }
+ /*663399*/
 
  #container {
    margin: 20px;
    text-align: center;
-   background-color: #65C6BB;
+   background-color: #BE90D4;
  }
 
  main {
-   background-color: #65C6BB;
+   background-color: #BE90D4;
    margin: 10px;
    /*padding: 20px;*/
 
@@ -52,12 +54,12 @@
 
  a {
    text-decoration: none;
-   color: #2A6E67;
+   color: #663399;
  }
 
  a:hover {
    text-decoration: none;
-   color: #ACE3DD;
+   color: #EEEEEE;
  }
 
 
@@ -102,6 +104,10 @@
  #sign_up_form label {
    padding: 10px;
  }
+
+#sign_up_form input[type='text'], input[type='password'] {
+   margin-bottom: 10px;
+}
 
  /*#################### Products ########################*/
 

@@ -3,6 +3,13 @@
 <br> to order products on facker.com</h2>
 
 <div id = "sign_up_form">
+
+
+
+
+
+
+
   <form action="/sign_up" method="POST">
     <label for="name">Name:</label>
     <input type="text" name="name" placeholder="name">
@@ -17,6 +24,11 @@
     <input type="text" name="address" placeholder="street address">
 
     <input type ="submit" value="sign up">
+
+
+    <%= form_for :user, url: new_user_path do |f| %>
+      <%= f.submit 'Sign Up' %>
+    <% end %>
 
     <p><%= @errors %></p>
 
