@@ -7,10 +7,26 @@
   <ul>
     <% @products.each do |product| %>
     <li>
-      <h3> <%= product.name %> </h3>
-      <p> <%= product.description %> </p>
-      <p> <%= product.price %> </p>
+      <h3> <a href="/products/<%= product.id %>" > <%= product.name %> </a></h3>
    </li>
     <% end %>
   </ul>
+  <p>To order products you will need to sign in or sign up.</p>
+  <p>To view details of a product please follow the above links</p>
+</div>
+
+
+<div id = "sign_in_form">
+  <form action="/sign_in" method="POST">
+      Email: <input type="text" name="email" placeholder="email">
+
+      Password: <input type="password" name="password" placeholder="password">
+      <input type ="submit" value="sign in">
+  </form>
+
+  <p><%= session[:error] %></p>
+
+  <form action="/sign_up" method="get">
+      <input type="submit" value="sign up">
+  </form>
 </div>
