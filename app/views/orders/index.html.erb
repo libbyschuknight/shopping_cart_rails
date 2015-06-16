@@ -9,22 +9,17 @@
     <% @user.orders.each do |order| %>
     <li>
       <%= order.id %> &nbsp;
-      <%= order.product.name %> &nbsp; &nbsp;
+      <%= order.try(:product).try(:name) %> &nbsp; &nbsp;
       <%= button_to 'Remove Item', order, method: 'delete' %>
-
-<!-- params: {order_id: order.id} -->
-<!--       <form action="/delete_item" method="POST">
-        <input type = "hidden" value="<= order.id %>" name = "id">
-        <input type ="submit" value="Remove item">
-      </form> -->
     </li>
-
-
     <% end %>
   </ul>
 
-  <form class = "remove-all" action="/delete_all_items" method="POST">
+
+  <%= button_to 'Remove All Items', remove_all_path, method: 'delete' %>
+
+<!--   <form class = "remove-all" action="/delete_all_items" method="POST">
     <input type ="submit" value="Remove ALL items from your cart">
-  </form>
+  </form> -->
 
 </div>
