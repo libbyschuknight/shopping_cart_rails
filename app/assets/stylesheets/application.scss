@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -21,7 +22,7 @@
 
  * {
    margin: 0 auto;
-   /*background-color: #BE90D4;*/
+   // /*background-color: #BE90D4;*/
  }
 
  body {
@@ -30,7 +31,7 @@
    font-family: 'Raleway', 'Trebuchet MS', Helvetica, sans-serif;
    color: #663399;
  }
- /*663399*/
+ // /*663399*/
 
  #container {
    margin: 20px;
@@ -41,7 +42,7 @@
  main {
    background-color: #BE90D4;
    margin: 10px;
-   /*padding: 20px;*/
+   // /*padding: 20px;*/
 
  }
 
@@ -52,7 +53,7 @@
    width: 600px;
  }
 
- /*####################### Links site wide ####################*/
+ // /*####################### Links site wide ####################*/
 
  a {
    text-decoration: none;
@@ -65,7 +66,7 @@
  }
 
 
- /*#################### Navigation ##########################*/
+ // /*#################### Navigation ##########################*/
 
  nav {
    text-align:center;
@@ -94,13 +95,13 @@
  }
 
 
- /*############# Sign up page ########################*/
+ // /*############# Sign up page ########################*/
 
  #sign_up_form form {
    margin-top: 30px;
    margin-bottom: 20px;
    width: 200px;
-   /*margin-right: 0px;*/
+   // /*margin-right: 0px;*/
  }
 
  #sign_up_form label {
@@ -111,7 +112,7 @@
    margin-bottom: 10px;
 }
 
- /*#################### Products ########################*/
+ // /*#################### Products ########################*/
 
  #products_list ul{
    list-style: none;
@@ -121,7 +122,7 @@
  }
 
 
- /*###############################*/
+ // /*###############################*/
 
 
  #product-item-view, #new-order-view {
@@ -137,7 +138,7 @@
    font-weight: bold;
  }
 
- /*####################################*/
+ // /*####################################*/
 
  #new-order-view h2, h3 {
    line-height: 2;
@@ -147,7 +148,7 @@
    margin-top: 20px;
  }
 
- /*#################### Cart View ########################*/
+ // /*#################### Cart View ########################*/
 
  #cart-view {
    width: 50%;
@@ -157,15 +158,15 @@
    margin: 0;
    width: 100px;
    display: inline-block;
-   /*float: right;*/
+   // /*float: right;*/
  }
 
  #cart-view ul{
-   /*margin-top: 40px;*/
+   // /*margin-top: 40px;*/
    list-style: none;
    padding: 0;
    text-decoration: none;
-   /*margin:5px;*/
+   // /*margin:5px;*/
  }
 
  #cart-view ul li {
@@ -178,18 +179,11 @@
  }
 
 
- /*######## Footer ########*/
+ // /*######## Footer ########*/
 
  footer {
    margin-top: 30px;
  }
-
-
-
-
-
-
-
 
 
 
